@@ -1,2 +1,2 @@
-# gtemplate
-Template for my repositories
+# gserver
+Simple socket server library

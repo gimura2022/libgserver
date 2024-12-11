@@ -14,7 +14,7 @@ static const char* cppflags = " -I include ";
 
 static const char* ldflags = " -fPIC ";
 
-static const char* libname = "gtemplate";
+static const char* libname = "gserver";
 
 static char* cc = "cc";
 static char* ar = "ar";
@@ -40,6 +40,9 @@ static void die(const char* msg, ...)
 
 static void compile(void)
 {
+	gnub__compile_subproject("libglog", *argv_ptr);
+	gnub__compile_subproject("libgstd", *argv_ptr);
+
 	strcat(cflags_out, cflags);
 	strcat(cppflags_out, cppflags);
 	strcat(ldflags_out, ldflags);
